@@ -1,0 +1,23 @@
+<!--Referred to tutorials from https://ionicacademy.com/ionic-crash-course/-->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Superhero Fantasy People</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let person of (people | async)?.results"
+      (click)="openDetails(person)">
+      {{ person.name }}
+    </ion-item>
+  </ion-list></ion-content><br>
+  
+  <div class="login">
+    <a href="https://www.starwars.com/search?q=characters" style="color:  #ffcc00"><em>To view more Superhero Fantasy People -
+        <strong><u>click here</u></strong></em></a>
+  </div>
+
+
