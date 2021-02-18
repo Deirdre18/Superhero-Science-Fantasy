@@ -6,8 +6,8 @@ export const environment = {
     projectId: "superhero-science-fantasy",
     storageBucket: "superhero-science-fantasy.appspot.com",
     messagingSenderId: "540082137140",
-    appId: "1:540082137140:web:1933b483d239cb8f354261",
-    measurementId: "G-0R6VXBLZ99",
+    appId: "1:540082137140:web:e7f43e6db45f11a0354261",
+    measurementId: "G-48CRSCDPRS",
     databaseURL: ""
   }
 };
