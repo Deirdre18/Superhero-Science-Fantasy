@@ -14,8 +14,8 @@ import { AnalyticsService } from 'src/app/services/analytics.service';
 })
 export class StarshipDetailsPage implements OnInit {
     enabled = this.analyticsService.analyticsEnabled;
-    subject: string='Check out all your favorite Fantasy Starships!'
-    text: string='Check out all your favorite Fantasy Starships!'
+    subject: string='Check out all your favorite Superhero Starships!'
+    text: string='Check out all your favorite Superhero Starships!'
     imgurl:string='https://i.pinimg.com/564x/07/02/f9/0702f9c8beb32202d41c9796aa42b42a.jpg'
     link: string='https://www.starwars.com/search?q=starships'
     starship: any;

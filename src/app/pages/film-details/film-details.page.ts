@@ -17,8 +17,8 @@ export class FilmDetailsPage implements OnInit {
   film: any;
   isFavorite = false;
   filmId = null;
-  subject: string='Check out all your favorite Superhero Films!'
-  text: string='Check out all your favorite Superhero Films!'
+  subject: string='Check out all your favorite Fantasy Films!'
+  text: string='Check out all your favorite Fantasy Films!'
   link: string='https://www.starwars.com/films/'
   imgurl:string='https://i.pinimg.com/564x/30/22/17/3022178e0353653078a619a7f084631d.jpg'
   ShareGeneric(parameter){
