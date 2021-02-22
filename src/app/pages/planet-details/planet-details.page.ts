@@ -15,8 +15,8 @@ import { AnalyticsService } from 'src/app/services/analytics.service';
 })
 export class PlanetDetailsPage implements OnInit {
   enabled = this.analyticsService.analyticsEnabled;
-  subject: string='Check out all your favorite Fantasy Planets!'
-  text: string='Check out all your favorite Fantasy Planets!'
+  subject: string='Check out all your favorite Planets from Starwars!'
+  text: string='Check out all your favorite Planets from Starwars!'
   imgurl:string='https://i.pinimg.com/564x/27/ce/0b/27ce0b906d4a11415fa8e1b0ceec7422.jpg'
   link: string='https://www.starwars.com/search?q=planets'
   planet: any;

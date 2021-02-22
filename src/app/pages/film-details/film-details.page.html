@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar id="color">
     <ion-buttons slot="start" defaultHref="/tabs/films">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -20,7 +20,7 @@
   <ion-card *ngIf="film" class="movie-card">
   
     <div style="text-align:center">
-      <a href="https://www.starwars.com/films" style="color: #ffcc00">Search Databank for Fantasy Films</a>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+      <a href="https://www.starwars.com/films" style="color: #250713"><em><strong><u>Search </u></strong>Databank for Fantasy Films</em></a>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
     </div>   
     
     <ion-item class="movie-card" lines="none">
@@ -51,8 +51,7 @@
     </ion-item>
 
     <br>
-    <div class="login" style="color: #ffcc00">
-      <a href="https://www.starwars.com/search?q=films" style="color: #ffcc00"><em>To view more Fantasy Films click here!</em></a>
+    <div class="login" style="color: #ffcc00">    
       <br><br>
       <ion-img style="height: 200px; width:100%" [src]="imgurl"></ion-img><br>
       <em>Please login into your favorite apps to share</em>

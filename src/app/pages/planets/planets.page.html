@@ -1,18 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Superhero Science Fantasy Planets</ion-title>
+    <ion-title><strong>Superhero Science Fantasy Planets</strong></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item button detail lines="inset" *ngFor="let planet of (planets | async)?.results"
-      (click)="openDetails(planet)">
-      {{ planet.name }}
-    </ion-item>
+    <ion-item button detail lines="inset" style="color: #250713" *ngFor="let planet of (planets | async)?.results"
+    (click)="openDetails(planet)">
+    {{ planet.name }}
+  </ion-item>
   </ion-list></ion-content><br>
-  
   <div class="login">
-    <a href="https://www.starwars.com/search?q=planets" style="color:  #ffcc00"><em>To view more Fantasy Planets - <strong><u>click here</u></strong></em></a>      
+    <a href="https://www.starwars.com/search?q=planets" style="color: #250713"><em>View Fantasy Planets - <strong><u>click here</u></strong></em></a>      
   </div>
+
+
+
+
+
+        
+
 
