@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item button detail lines="inset" style="color: #250713" *ngFor="let starship of (starships | async)?.results"
+    <ion-item button detail lines="inset" style="color: #ffcc00" *ngFor="let starship of (starships | async)?.results"
     (click)="openDetails(starship)">
     {{ starship.name }}
   </ion-item>
