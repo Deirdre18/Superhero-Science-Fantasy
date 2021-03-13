@@ -24,12 +24,12 @@ input[type=checkbox] {
   display: none;
 }
 
-.container img {
-  transition: transform 0.25s ease;
-  cursor: zoom-in;
-}
-
 input[type=checkbox]:checked ~ label > img {
   transform: scale(1.5);
   cursor: zoom-out;
+}
+
+.container img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
 }
