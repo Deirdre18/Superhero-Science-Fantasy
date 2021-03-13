@@ -18,11 +18,12 @@
 <ion-content padding>
 
   <ion-card *ngIf="person" class="person-card">
-  
+
     <div style="text-align:center">
-      <a href="https://www.starwars.com/search?q=characters" style="color: #ffcc00"> <em><strong><u>Search </u></strong>Databank for Superhero People</em></a>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-    </div>   
-    
+      <a href="https://www.starwars.com/search?q=characters" style="color: #ffcc00"> <em><strong><u>Search
+            </u></strong>Databank for Superhero People</em></a>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    </div>
+
     <ion-item class="person-card" lines="none">
       <ion-icon name="transgender-outline" size="small" color="warning" slot="start"></ion-icon>
       <ion-grid>
@@ -144,21 +145,26 @@
       </ion-grid>
     </ion-item>
     
-    <br>
-    <div class="login" style="color: #ffcc00">    
-      <br><br>
-      
-      <div class="img-hover-zoom--quick-zoom img">
-      <img src="https://i.pinimg.com/564x/3d/7c/11/3d7c118d7e4ea4a8c9bac277873c7e54.jpg" alt="Another Image zoom-on-hover effect">
-      
+    <br><br><br>
+    
+    <div class="login" style="color: #ffcc00">
+
+      <div class="container">
+        <input type="checkbox" id="zoomCheck">
+        <label for="zoomCheck">
+
+          <img src="https://i.pinimg.com/564x/3d/7c/11/3d7c118d7e4ea4a8c9bac277873c7e54.jpg" width="300" height="200"
+            alt="photo">
+        </label>
       </div>
-      
+
+      <br>
       <em>Please login into your favorite apps to share</em>
     </div>
 
     <ion-grid>
       <ion-row class="ion-justify-content-center">
-       
+
         <ion-col size="2">
           <ion-button size="small" color="warning" (click)="SendEmail()">
             <ion-icon name="mail-outline"></ion-icon>
@@ -169,8 +175,8 @@
           <ion-button size="small" color="primary" (click)="ShareFacebook()">
             <ion-icon name="logo-facebook"></ion-icon>
           </ion-button>
-        </ion-col>        
-         
+        </ion-col>
+
         <ion-col size="2">
           <ion-button size="small" color="secondary" (click)="SendTwitter()">
             <ion-icon name="logo-twitter"></ion-icon>

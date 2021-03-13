@@ -18,11 +18,12 @@
 <ion-content padding>
 
   <ion-card *ngIf="film" class="movie-card">
-  
+
     <div style="text-align:center">
-      <a href="https://www.starwars.com/films" style="color: #ffcc00"><em><strong><u>Search </u></strong>Databank for Fantasy Movies</em></a>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-    </div>   
-    
+      <a href="https://www.starwars.com/films" style="color: #ffcc00"><em><strong><u>Search </u></strong>Databank for
+          Fantasy Movies</em></a>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    </div>
+
     <ion-item class="movie-card" lines="none">
       <p class="story" style="color: #ffcc00;">Story of {{film.title}}</p>
     </ion-item>
@@ -50,28 +51,26 @@
       {{ film.release_date | date }}
     </ion-item>
 
-    <br>
-    
- 
-    <div class="ion-padding">The world is your oyster. 
-    
-      <ion-slides>  
-     
-                 
-      <div class="swiper-zoom-container">
-         <ion-slide><img src="https://i.pinimg.com/564x/30/22/17/3022178e0353653078a619a7f084631d.jpg"></ion-slide>     
+    <br><br><br>
+
+    <div class="login" style="color: #ffcc00">
+
+      <div class="container">
+        <input type="checkbox" id="zoomCheck">
+        <label for="zoomCheck">
+
+          <img src="https://i.pinimg.com/564x/30/22/17/3022178e0353653078a619a7f084631d.jpg" width="300" height="200"
+            alt="photo">
+        </label>
       </div>
-      
-      </ion-slides>
-      
-      <p> If you get lost...</p>
-               
-       
-    </div>   
-    
+
+      <br>
+      <em>Please login into your favorite apps to share</em>
+    </div>
+
     <ion-grid>
       <ion-row class="ion-justify-content-center">
-       
+
         <ion-col size="2">
           <ion-button size="small" color="warning" (click)="SendEmail()">
             <ion-icon name="mail-outline"></ion-icon>
@@ -82,8 +81,8 @@
           <ion-button size="small" color="primary" (click)="ShareFacebook()">
             <ion-icon name="logo-facebook"></ion-icon>
           </ion-button>
-        </ion-col>        
-         
+        </ion-col>
+
         <ion-col size="2">
           <ion-button size="small" color="secondary" (click)="SendTwitter()">
             <ion-icon name="logo-twitter"></ion-icon>

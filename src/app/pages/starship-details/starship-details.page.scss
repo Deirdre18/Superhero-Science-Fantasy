@@ -1,3 +1,5 @@
+//https://stackoverflow.com/questions/39858998/zoom-in-and-out-on-mouse-click-with-css#39859268
+
 .starship-card {    
     --border: 1px solid var(--ion-color-secondary);
 }
@@ -18,17 +20,16 @@ ion-title {--color: #250713;}
 
 a {text-align:center;}
 
-/* Quick-zoom Container */
-.img-hover-zoom--quick-zoom img {
-  transform-origin: 0 0;
-  transition: transform .25s, visibility .25s ease-in;
+input[type=checkbox] {
+  display: none;
 }
 
-/* The Transformation */
-.img-hover-zoom--quick-zoom:hover img {
-  transform: scale(2);
+.container img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
 }
 
-
-
-
+input[type=checkbox]:checked ~ label > img {
+  transform: scale(1.5);
+  cursor: zoom-out;
+}
