@@ -16,7 +16,7 @@ export class PersonDetailsPage implements OnInit {
   enabled = this.analyticsService.analyticsEnabled;
   subject: string='Check out all your favorite Characters from Starwars!'
   text: string='Check out your favorite Characters from Starwars!'
-  imgurl:string='https://i.pinimg.com/564x/3d/7c/11/3d7c118d7e4ea4a8c9bac277873c7e54.jpg'
+  imgurl:string='../../assets/images/characters.jpeg'
   link: string='https://www.starwars.com/search?q=characters'
   person: any;
   isFavorite1 = false;

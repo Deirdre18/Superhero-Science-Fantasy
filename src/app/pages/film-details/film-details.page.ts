@@ -20,7 +20,7 @@ export class FilmDetailsPage implements OnInit {
   subject: string='Check out all your favorite Starwars films!'
   text: string='Check out all your favorite Starwars films!'
   link: string='https://www.starwars.com/films/'
-  imgurl:string='https://i.pinimg.com/564x/30/22/17/3022178e0353653078a619a7f084631d.jpg'
+  imgurl:string='../../assets/images/characters.jpeg'
   ShareGeneric(parameter){
     const url = this.link
     const text = parameter+'\n'

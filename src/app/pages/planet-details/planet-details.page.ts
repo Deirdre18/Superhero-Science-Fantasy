@@ -17,7 +17,7 @@ export class PlanetDetailsPage implements OnInit {
   enabled = this.analyticsService.analyticsEnabled;
   subject: string='Check out all your favorite Planets from Starwars!'
   text: string='Check out all your favorite Planets from Starwars!'
-  imgurl:string='https://i.pinimg.com/564x/27/ce/0b/27ce0b906d4a11415fa8e1b0ceec7422.jpg'
+  imgurl:string='../../assets/images/planets.jpeg'
   link: string='https://www.starwars.com/search?q=planets'
   planet: any;
   isFavorite2 = false;
