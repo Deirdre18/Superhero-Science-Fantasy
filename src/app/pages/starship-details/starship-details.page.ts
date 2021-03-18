@@ -16,7 +16,7 @@ export class StarshipDetailsPage implements OnInit {
     enabled = this.analyticsService.analyticsEnabled;
     subject: string='Check out all your favorite Starships from Starwars!'
     text: string='Check out all your favorite Starships from Starwars!'
-    imgurl:string='../../assets/images/starships.jpeg'
+    imgurl:string='https://raw.githubusercontent.com/Deirdre18/Superhero-Science-Fantasy/main/src/assets/images/spaceships.png'
     link: string='https://www.starwars.com/search?q=starships'
     starship: any;
     isFavorite3 = false;
