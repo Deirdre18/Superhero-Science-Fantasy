@@ -59,7 +59,7 @@
     "cordova-plugin-x-socialsharing": "6.0.3",
     "cordova-res": "0.15.3",
     "cordova-sqlite-storage": "5.1.0",
-    "jasmine-core": "3.6.0",
+    "jasmine-core": "3.7.0",
     "jasmine-spec-reporter": "6.0.0",
     "karma": "5.2.3",
     "karma-chrome-launcher": "3.1.0",
