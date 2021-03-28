@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar id="color">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 class="title">Favorites</h1>
+
+  <ion-item *ngFor="let f of films">
+    <ion-label>
+      {{ f.title }}
+    </ion-label>
+  </ion-item>
+</ion-content>

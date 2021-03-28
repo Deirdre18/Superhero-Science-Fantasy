@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list>  
     <ion-item button detail lines="inset" style="color:#250713" *ngFor="let film of (films | async)?.results"
       (click)="openDetails(film)">
       {{ film.title }}

@@ -121,5 +121,5 @@ export class FavoriteService {
         return this.storage.set(STORAGE_KEY, result);
       }
     });
-  }
+  }   
 }
