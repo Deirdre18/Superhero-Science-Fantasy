@@ -4,11 +4,21 @@
 </ion-header>
 
 <ion-content>
-  <h1 class="title">Favorites</h1>
+  <h1 class="title">Favorite Films</h1>
 
   <ion-item *ngFor="let f of films">
     <ion-label>
       {{ f.title }}
+    </ion-label>
+  </ion-item>
+</ion-content>
+
+<ion-content>
+  <h1 class="title">Favorite Planets</h1>
+
+  <ion-item *ngFor="let p of planets">
+    <ion-label>
+      {{ p.name }}
     </ion-label>
   </ion-item>
 </ion-content>

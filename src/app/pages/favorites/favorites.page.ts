@@ -31,7 +31,7 @@ export class FavoritesPage implements OnInit {
 
     // Wait until all observables are finished
     forkJoin(observables).subscribe(result => {
-      console.log('filmd data: ', result);         
+      console.log('filmd data: ', result);
       this.films = result;
     })
   }

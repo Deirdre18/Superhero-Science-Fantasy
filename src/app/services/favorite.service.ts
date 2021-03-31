@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
-const STORAGE_KEY  = 'favoriteFilms';'favoritePlanets';'favoritePeople'; 'favoriteStarships';
+const STORAGE_KEY  = 'favoriteFilms';
+const PLANETS_KEY = 'favoritePlanets';
+const PEOPLE_KEY = 'favoritePeople';
+const STARSHIPS_KEY = 'favoritesStarships';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +13,7 @@ export class FavoriteService {
 
   constructor(private storage: Storage) {
   }
-
+ 
   getAllFavoriteFilms() {
     return this.storage.get(STORAGE_KEY);
   }
@@ -34,7 +37,7 @@ export class FavoriteService {
   }
 
   isFavorite1(personId) {
-    return this.getAllFavoritePlanets().then(result => {
+    return this.getAllFavoritePeople().then(result => {
       return result && result.indexOf(personId) !== -1;
     });
   }
