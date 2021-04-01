@@ -11,13 +11,19 @@ import { forkJoin } from 'rxjs';
 })
 export class FavoritesPage implements OnInit {
   films = [];
+  planets = [];
 
   constructor(private storage: Storage, private favService: FavoriteService, private apiService: ApiService) { }
 
   ngOnInit() {
     this.favService.getAllFavoriteFilms().then(data => {
-      console.log('favs: ', data); // ["1", "5", "3"]
+      console.log('fav film: ', data); // ["1", "5", "3"]
       this.loadFilmData(data);
+    });
+
+    this.favService.getAllFavoritePlanets().then(data => {
+      console.log('fav planet: ', data); // ["1", "5", "3"]
+      this.loadPlanetData(data);
     });
   }
 
@@ -31,8 +37,23 @@ export class FavoritesPage implements OnInit {
 
     // Wait until all observables are finished
     forkJoin(observables).subscribe(result => {
-      console.log('filmd data: ', result);
+      console.log('film data: ', result);
       this.films = result;
+    })
+  }
+
+  loadPlanetData(favFilms: string[]) {
+    const observables = [];
+
+    // Create an API call for every saved planet ID
+    for (let id of favFilms) {
+      observables.push(this.apiService.getPlanet(id));
+    }
+
+    // Wait until all observables are finished
+    forkJoin(observables).subscribe(result => {
+      console.log('planet data: ', result);
+      this.planets = result;
     })
   }
 }
