@@ -1,22 +1,26 @@
 <ion-header>
-  <ion-toolbar id="color">
+  <ion-toolbar>
+    <h2 style="text-align:center; color:#250713"><strong>Your Favorites</strong></h2>
   </ion-toolbar>
-</ion-header>
+</ion-header><br><br>
 
 <ion-content>
-  <h1 class="title">Favorite Films</h1>
+  <ion-title><strong>Favorite Films</strong></ion-title>
 
-  <ion-item *ngFor="let f of films">
+  <ion-item *ngFor="let f of films" style="color:#250713">
     <ion-label>
       {{ f.title }}
     </ion-label>
   </ion-item>
+</ion-content>
 
-  <h1 class="title">Favorite Planets</h1>
 
-  <ion-item *ngFor="let p of planets">
+<ion-content>
+  <ion-title><strong>Favorite Planets</strong></ion-title>
+
+  <ion-item *ngFor="let p of planets" style="color:#250713">
     <ion-label>
       {{ p.name }}
     </ion-label>
   </ion-item>
-  </ion-content>
+</ion-content>
