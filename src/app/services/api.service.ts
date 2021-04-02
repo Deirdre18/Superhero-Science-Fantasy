@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ApiService {
  
   constructor(private http: HttpClient) { }
-
+ 
   getFilms() {
     return this.http.get('https://swapi.dev/api/films');
   }
@@ -41,5 +41,4 @@ export class ApiService {
   getPerson(id) {
     return this.http.get(`https://swapi.dev/api/people/${id}`);
   }
-
 }

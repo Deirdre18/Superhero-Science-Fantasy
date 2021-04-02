@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { FavoriteService } from '../../services/favorite.service';
-import { ApiService } from '../../services/api.service';
+import { ApiService } from 'src/app/services/api.service';
+import { FavoriteService } from 'src/app/services/favorite.service';
 import { forkJoin } from 'rxjs';
 
 @Component({
@@ -42,11 +42,11 @@ export class FavoritesPage implements OnInit {
     })
   }
 
-  loadPlanetData(favFilms: string[]) {
+  loadPlanetData(favPlanets: string[]) {
     const observables = [];
 
     // Create an API call for every saved planet ID
-    for (let id of favFilms) {
+    for (let id of favPlanets) {
       observables.push(this.apiService.getPlanet(id));
     }
 

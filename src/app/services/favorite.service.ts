@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
-const STORAGE_KEY  = 'favoriteFilms';'favoritePlanets';'favoritePeople'; 'favoriteStarships';
+const STORAGE_KEY  = 'favoriteFilms';
+const PLANETS_KEY = 'favoritePlanets';
+const PEOPLE_KEY = 'favoritePeople';
+const STARSHIPS_KEY = 'favoriteStarships;'
+
 
 @Injectable({
   providedIn: 'root'
@@ -16,15 +20,15 @@ export class FavoriteService {
   }
 
   getAllFavoritePeople() {
-    return this.storage.get(STORAGE_KEY);
+    return this.storage.get(PEOPLE_KEY);
   }
 
   getAllFavoritePlanets() {
-    return this.storage.get(STORAGE_KEY);
+    return this.storage.get(PLANETS_KEY);
   }
 
   getAllFavoriteStarships() {
-    return this.storage.get(STORAGE_KEY);
+    return this.storage.get(STARSHIPS_KEY);
   }
   
   isFavorite(filmId) {
@@ -63,7 +67,7 @@ export class FavoriteService {
     return this.getAllFavoritePeople().then(result => {
       result = result || [];
       result.push(personId);
-      return this.storage.set(STORAGE_KEY, result);
+      return this.storage.set(PEOPLE_KEY, result);
     });
   }
 
@@ -71,7 +75,7 @@ export class FavoriteService {
     return this.getAllFavoritePlanets().then(result => {
       result = result || [];
       result.push(planetId);
-      return this.storage.set(STORAGE_KEY, result);
+      return this.storage.set(PLANETS_KEY, result);
     });
   }
 
@@ -79,7 +83,7 @@ export class FavoriteService {
     return this.getAllFavoriteStarships().then(result => {
       result = result || [];
       result.push(starshipId);
-      return this.storage.set(STORAGE_KEY, result);
+      return this.storage.set(STARSHIPS_KEY, result);
     });
   }
 
@@ -98,7 +102,7 @@ export class FavoriteService {
       if (result) {
         var index = result.indexOf(personId);
         result.splice(index, 1);
-        return this.storage.set(STORAGE_KEY, result);
+        return this.storage.set(PEOPLE_KEY, result);
       }
     });
   }
@@ -108,7 +112,7 @@ export class FavoriteService {
       if (result) {
         var index = result.indexOf(planetId);
         result.splice(index, 1);
-        return this.storage.set(STORAGE_KEY, result);
+        return this.storage.set(PLANETS_KEY, result);
       }
     });
   }
@@ -118,7 +122,7 @@ export class FavoriteService {
       if (result) {
         var index = result.indexOf(starshipId);
         result.splice(index, 1);
-        return this.storage.set(STORAGE_KEY, result);
+        return this.storage.set(STARSHIPS_KEY, result);
       }
     });
   }
