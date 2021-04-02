@@ -5,6 +5,7 @@
 </ion-header><br><br>
 
 <ion-content>
+
   <ion-title><strong>Favorite Films</strong></ion-title>
 
   <ion-item *ngFor="let f of films" style="color:#250713">
@@ -12,15 +13,30 @@
       {{ f.title }}
     </ion-label>
   </ion-item>
-</ion-content>
+  <br><br><br>
 
+  <ion-title><strong>Favorite People</strong></ion-title>
+  <ion-item *ngFor="let p of people" style="color:#250713">
+    <ion-label>
+      {{ p.name }}
+    </ion-label>
+  </ion-item>
+  <br><br><br>
 
-<ion-content>
   <ion-title><strong>Favorite Planets</strong></ion-title>
-
   <ion-item *ngFor="let p of planets" style="color:#250713">
     <ion-label>
       {{ p.name }}
     </ion-label>
   </ion-item>
+  <br><br><br>
+
+  <ion-title><strong>Favorite Starships</strong></ion-title>
+  <ion-item *ngFor="let s of starships" style="color:#250713">
+    <ion-label>
+      {{ s.name }}
+    </ion-label>
+  </ion-item>
+  <br><br><br>
+
 </ion-content>

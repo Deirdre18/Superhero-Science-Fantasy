@@ -38,7 +38,7 @@ export class FavoriteService {
   }
 
   isFavorite1(personId) {
-    return this.getAllFavoritePlanets().then(result => {
+    return this.getAllFavoritePeople().then(result => {
       return result && result.indexOf(personId) !== -1;
     });
   }
