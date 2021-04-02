@@ -15,23 +15,23 @@ import { AnalyticsService } from 'src/app/services/analytics.service';
 })
 export class PlanetDetailsPage implements OnInit {
   enabled = this.analyticsService.analyticsEnabled;
-  subject: string='Check out all your favorite Planets from Starwars!'
-  text: string='Check out all your favorite Planets from Starwars!'
-  imgurl:string='https://raw.githubusercontent.com/Deirdre18/Superhero-Science-Fantasy/main/src/assets/images/planets.png'
-  link: string='https://www.starwars.com/search?q=planets'
+  subject: string = 'Check out all your favorite Planets from Starwars!'
+  text: string = 'Check out all your favorite Planets from Starwars!'
+  imgurl: string = 'https://raw.githubusercontent.com/Deirdre18/Superhero-Science-Fantasy/main/src/assets/images/planets.png'
+  link: string = 'https://www.starwars.com/search?q=planets'
   planet: any;
   isFavorite2 = false;
   planetId = null;
 
-  ShareGeneric(parameter){
+  ShareGeneric(parameter) {
     const url = this.link
-    const text = parameter+'\n'
-    this.socialSharing.share(this.subject, null, url,this.link)
+    const text = parameter + '\n'
+    this.socialSharing.share(this.subject, null, url, this.link)
   }
- 
-    constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
-      private favoriteService: FavoriteService, private socialSharing: SocialSharing, private analyticsService: AnalyticsService) { }    
-     
+
+  constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
+    private favoriteService: FavoriteService, private socialSharing: SocialSharing, private analyticsService: AnalyticsService) { }
+
   ngOnInit() {
     this.planetId = this.activatedRoute.snapshot.paramMap.get('id');
     this.api.getPlanet(this.planetId).subscribe(res => {
@@ -54,24 +54,24 @@ export class PlanetDetailsPage implements OnInit {
       this.isFavorite2 = false;
     });
   }
-  SendEmail(){
+  SendEmail() {
     this.socialSharing.shareViaEmail(this.link, this.subject, ['email@address.com'])
   }
 
-  ShareFacebook(){
+  ShareFacebook() {
     this.socialSharing.shareViaFacebookWithPasteMessageHint(this.link, null /* url */, 'Copy Paste!')
   }
 
-  SendTwitter(){
+  SendTwitter() {
     this.socialSharing.shareViaTwitter(this.link, null /* url */)
   }
 
-  SendInstagram(){
+  SendInstagram() {
     this.socialSharing.shareViaInstagram(this.text, this.imgurl)
   }
 
-  ShareWhatsapp(){
+  ShareWhatsapp() {
     this.socialSharing.shareViaWhatsApp(this.link)
-  }    
+  }
 
 }

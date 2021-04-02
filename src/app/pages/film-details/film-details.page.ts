@@ -17,20 +17,20 @@ export class FilmDetailsPage implements OnInit {
   film: any;
   isFavorite = false;
   filmId = null;
-  subject: string='Check out all your favorite Starwars films!'
-  text: string='Check out all your favorite Starwars films!'
-  link: string='https://www.starwars.com/films/'
-  imgurl: string='https://raw.githubusercontent.com/Deirdre18/Superhero-Science-Fantasy/main/src/assets/images/films.png'
-  ShareGeneric(parameter){
+  subject: string = 'Check out all your favorite Starwars films!'
+  text: string = 'Check out all your favorite Starwars films!'
+  link: string = 'https://www.starwars.com/films/'
+  imgurl: string = 'https://raw.githubusercontent.com/Deirdre18/Superhero-Science-Fantasy/main/src/assets/images/films.png'
+  ShareGeneric(parameter) {
     const url = this.link
-    const text = parameter+'\n'
-    const subject = parameter+'\n'
-    this.socialSharing.share(this.subject, url,this.link, this.imgurl)
+    const text = parameter + '\n'
+    const subject = parameter + '\n'
+    this.socialSharing.share(this.subject, url, this.link, this.imgurl)
   }
-  
+
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
-    private favoriteService: FavoriteService, private socialSharing: SocialSharing, private analyticsService: AnalyticsService) { }  
- 
+    private favoriteService: FavoriteService, private socialSharing: SocialSharing, private analyticsService: AnalyticsService) { }
+
   ngOnInit() {
     this.filmId = this.activatedRoute.snapshot.paramMap.get('id');
     this.api.getFilm(this.filmId).subscribe(res => {
@@ -54,24 +54,24 @@ export class FilmDetailsPage implements OnInit {
     });
 
   }
-  SendEmail(){
+  SendEmail() {
     this.socialSharing.shareViaEmail(this.link, this.subject, ['email@address.com'])
   }
 
-  ShareFacebook(){
+  ShareFacebook() {
     this.socialSharing.shareViaFacebookWithPasteMessageHint(this.link, null /* url */, 'Copy Paste!')
   }
 
-  SendTwitter(){
+  SendTwitter() {
     this.socialSharing.shareViaTwitter(this.link, null /* url */)
   }
 
-  SendInstagram(){
+  SendInstagram() {
     this.socialSharing.shareViaInstagram(this.text, this.imgurl)
   }
 
-  ShareWhatsapp(){
+  ShareWhatsapp() {
     this.socialSharing.shareViaWhatsApp(this.link)
-  }    
+  }
 
 }

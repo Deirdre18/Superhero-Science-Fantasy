@@ -10,7 +10,7 @@
       </ion-button>
       <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
         <ion-icon name="star-outline" slot="icon-only" color="warning"></ion-icon>
-      </ion-button>     
+      </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -22,7 +22,7 @@
     <div style="text-align:center">
       <a href="https://www.starwars.com/films" style="color: #ffcc00"><em><strong><u>Search </u></strong>Databank for
           Fantasy Movies</em></a>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-    </div>    
+    </div>
 
     <ion-item class="movie-card" lines="none">
       <p class="story" style="color: #ffcc00;">Story of {{film.title}}</p>
@@ -56,14 +56,12 @@
     <div class="login" style="color: #ffcc00">
 
       <div class="container">
-       
-        
         <input type="checkbox" id="zoomCheck">
-        <label for="zoomCheck"> 
+        <label for="zoomCheck">
           <ion-img style="height: 200px; width:100%" [src]="imgurl"></ion-img>
-        </label>     
-      </div> 
-    
+        </label>
+      </div>
+
       <br>
       <em>Please login into your favorite apps to share</em>
     </div>
