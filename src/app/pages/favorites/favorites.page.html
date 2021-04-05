@@ -4,7 +4,12 @@
   </ion-toolbar>
 </ion-header><br><br>
 
-<ion-content>
+<ion-content> 
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-down" pullingText="Pull to refresh" refreshingSpinner="dots"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
 
   <ion-title><strong>Favorite Films</strong></ion-title>
 

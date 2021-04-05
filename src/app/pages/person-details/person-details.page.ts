@@ -30,7 +30,7 @@ export class PersonDetailsPage implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
     private favoriteService: FavoriteService, private socialSharing: SocialSharing, private analyticsService: AnalyticsService) { }
-
+ 
   ngOnInit() {
     this.personId = this.activatedRoute.snapshot.paramMap.get('id');
     this.api.getPerson(this.personId).subscribe(res => {

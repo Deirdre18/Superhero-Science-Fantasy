@@ -4,6 +4,7 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>{{person?.name }}</ion-title>
+    
     <ion-buttons slot="end">
       <ion-button (click)="unfavoritePerson()" *ngIf="isFavorite1">
         <ion-icon name="star" slot="icon-only" color="warning"></ion-icon>
@@ -15,7 +16,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding> 
 
   <ion-card *ngIf="person" class="person-card">
 

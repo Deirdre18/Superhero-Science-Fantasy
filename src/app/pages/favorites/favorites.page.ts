@@ -16,12 +16,22 @@ export class FavoritesPage implements OnInit {
   starships = [];
 
   constructor(private storage: Storage, private favService: FavoriteService, private apiService: ApiService) { }
+ 
+  doRefresh(event) {
+    console.log('Begin async operation');
+    this.ngOnInit();
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 2000);
+  }
 
   ngOnInit() {
     this.favService.getAllFavoriteFilms().then(data => {
       console.log('fav film: ', data); // ["1", "5", "3"]
       this.loadFilmData(data);
-    });   
+    });    
 
     this.favService.getAllFavoritePeople().then(data => {
       console.log('fav people: ', data); // ["1", "5", "3"]
@@ -99,4 +109,8 @@ export class FavoritesPage implements OnInit {
       this.starships = result;
     })
   }
+}
+
+function data(data: any): any[] {
+  throw new Error('Function not implemented.');
 }

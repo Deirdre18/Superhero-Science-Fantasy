@@ -30,8 +30,9 @@ export class FilmDetailsPage implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
     private favoriteService: FavoriteService, private socialSharing: SocialSharing, private analyticsService: AnalyticsService) { }
-
+       
   ngOnInit() {
+
     this.filmId = this.activatedRoute.snapshot.paramMap.get('id');
     this.api.getFilm(this.filmId).subscribe(res => {
       this.film = res;
