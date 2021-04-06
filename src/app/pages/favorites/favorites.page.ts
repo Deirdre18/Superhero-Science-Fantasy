@@ -114,3 +114,4 @@ export class FavoritesPage implements OnInit {
 function data(data: any): any[] {
   throw new Error('Function not implemented.');
 }
+

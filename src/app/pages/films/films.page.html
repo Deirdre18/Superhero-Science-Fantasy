@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content> 
   <ion-list>
     <ion-item button detail lines="inset" style="color:#250713" *ngFor="let film of (films | async)?.results"
       (click)="openDetails(film)">
@@ -12,6 +12,7 @@
     </ion-item>
   </ion-list>
 </ion-content><br>
+
 <div class="login">
   <a href="https://www.starwars.com/films" style="color: #ffcc00"><em>View Superhero Movies - <strong><u>click
           here</u></strong></em></a>
