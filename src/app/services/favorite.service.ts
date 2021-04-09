@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
-const STORAGE_KEY  = 'favoriteFilms';
-const PLANETS_KEY = 'favoritePlanets';
-const PEOPLE_KEY = 'favoritePeople';
-const STARSHIPS_KEY = 'favoriteStarships;'
-
+const STORAGE_KEY  = 'favoriteFilms';'favoritePlanets';'favoritePeople'; 'favoriteStarships';
 
 @Injectable({
   providedIn: 'root'
@@ -14,21 +10,21 @@ export class FavoriteService {
 
   constructor(private storage: Storage) {
   }
- 
+
   getAllFavoriteFilms() {
     return this.storage.get(STORAGE_KEY);
   }
 
   getAllFavoritePeople() {
-    return this.storage.get(PEOPLE_KEY);
+    return this.storage.get(STORAGE_KEY);
   }
 
   getAllFavoritePlanets() {
-    return this.storage.get(PLANETS_KEY);
+    return this.storage.get(STORAGE_KEY);
   }
 
   getAllFavoriteStarships() {
-    return this.storage.get(STARSHIPS_KEY);
+    return this.storage.get(STORAGE_KEY);
   }
   
   isFavorite(filmId) {
@@ -38,7 +34,7 @@ export class FavoriteService {
   }
 
   isFavorite1(personId) {
-    return this.getAllFavoritePeople().then(result => {
+    return this.getAllFavoritePlanets().then(result => {
       return result && result.indexOf(personId) !== -1;
     });
   }
@@ -67,7 +63,7 @@ export class FavoriteService {
     return this.getAllFavoritePeople().then(result => {
       result = result || [];
       result.push(personId);
-      return this.storage.set(PEOPLE_KEY, result);
+      return this.storage.set(STORAGE_KEY, result);
     });
   }
 
@@ -75,7 +71,7 @@ export class FavoriteService {
     return this.getAllFavoritePlanets().then(result => {
       result = result || [];
       result.push(planetId);
-      return this.storage.set(PLANETS_KEY, result);
+      return this.storage.set(STORAGE_KEY, result);
     });
   }
 
@@ -83,7 +79,7 @@ export class FavoriteService {
     return this.getAllFavoriteStarships().then(result => {
       result = result || [];
       result.push(starshipId);
-      return this.storage.set(STARSHIPS_KEY, result);
+      return this.storage.set(STORAGE_KEY, result);
     });
   }
 
@@ -102,7 +98,7 @@ export class FavoriteService {
       if (result) {
         var index = result.indexOf(personId);
         result.splice(index, 1);
-        return this.storage.set(PEOPLE_KEY, result);
+        return this.storage.set(STORAGE_KEY, result);
       }
     });
   }
@@ -112,7 +108,7 @@ export class FavoriteService {
       if (result) {
         var index = result.indexOf(planetId);
         result.splice(index, 1);
-        return this.storage.set(PLANETS_KEY, result);
+        return this.storage.set(STORAGE_KEY, result);
       }
     });
   }
@@ -122,7 +118,7 @@ export class FavoriteService {
       if (result) {
         var index = result.indexOf(starshipId);
         result.splice(index, 1);
-        return this.storage.set(STARSHIPS_KEY, result);
+        return this.storage.set(STORAGE_KEY, result);
       }
     });
   }
