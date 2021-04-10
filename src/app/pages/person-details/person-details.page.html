@@ -4,7 +4,6 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>{{person?.name }}</ion-title>
-    
     <ion-buttons slot="end">
       <ion-button (click)="unfavoritePerson()" *ngIf="isFavorite1">
         <ion-icon name="star" slot="icon-only" color="warning"></ion-icon>
@@ -16,15 +15,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding> 
+<ion-content padding>
 
-  <ion-card *ngIf="person" class="person-card">
-
+  <ion-card *ngIf="person" class="movie-card">
+  
     <div style="text-align:center">
-      <a href="https://www.starwars.com/search?q=characters" style="color: #ffcc00"> <em><strong><u>Search
-            </u></strong>Databank for Superhero People</em></a>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
-    </div>
-
+      <a href="https://www.starwars.com/search?q=characters" style="color: #250713"><em><strong><u>Search </u></strong>Starwars People Databank</em></a>​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    </div>   
+    
     <ion-item class="person-card" lines="none">
       <ion-icon name="transgender-outline" size="small" color="warning" slot="start"></ion-icon>
       <ion-grid>
@@ -145,25 +143,18 @@
         </ion-row>
       </ion-grid>
     </ion-item>
-
-    <br><br><br>
-
-    <div class="login" style="color: #ffcc00">
-
-      <div class="container">
-        <input type="checkbox" id="zoomCheck">
-        <label for="zoomCheck">
-          <ion-img style="height: 200px; width:100%" [src]="imgurl"></ion-img>
-        </label>
-      </div>
-
-      <br>
+    
+    <br>
+    <div class="login">
+      <a href="https://www.starwars.com/search?q=characters" style="color: #250713"><em><strong><u>View </u></strong>more Starwars People</em></a>
+      <br><br>
+      <ion-img style="height: 200px; width:100%" [src]="imgurl"></ion-img><br>
       <em>Please login into your favorite apps to share</em>
     </div>
 
     <ion-grid>
       <ion-row class="ion-justify-content-center">
-
+       
         <ion-col size="2">
           <ion-button size="small" color="warning" (click)="SendEmail()">
             <ion-icon name="mail-outline"></ion-icon>
@@ -174,8 +165,8 @@
           <ion-button size="small" color="primary" (click)="ShareFacebook()">
             <ion-icon name="logo-facebook"></ion-icon>
           </ion-button>
-        </ion-col>
-
+        </ion-col>        
+         
         <ion-col size="2">
           <ion-button size="small" color="secondary" (click)="SendTwitter()">
             <ion-icon name="logo-twitter"></ion-icon>

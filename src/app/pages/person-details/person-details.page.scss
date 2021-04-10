@@ -1,5 +1,3 @@
-//https://stackoverflow.com/questions/39858998/zoom-in-and-out-on-mouse-click-with-css#39859268
-
 .person-card {    
     --border: 1px solid var(--ion-color-secondary);
 }
@@ -20,16 +18,5 @@ ion-title {--color: #250713;}
 
 a {text-align:center;}
 
-input[type=checkbox] {
-  display: none;
-}
 
-input[type=checkbox]:checked ~ label > ion-img {
-  transform: scale(1.5);
-  cursor: zoom-out;
-}
 
-.container ion-img {
-  transition: transform 0.25s ease;
-  cursor: zoom-in;
-}

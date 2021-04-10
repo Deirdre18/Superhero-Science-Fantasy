@@ -34,9 +34,9 @@ export class FavoritesPage implements OnInit {
     });    
 
     this.favService.getAllFavoritePeople().then(data => {
-      console.log('fav people: ', data); // ["1", "5", "3"]
-      this.loadPeopleData(data);
-    });
+      console.log('fav person: ', data); // ["1", "5", "3"]
+      this.loadPersonData(data);
+    });  
 
     this.favService.getAllFavoritePlanets().then(data => {
       console.log('fav planet: ', data); // ["1", "5", "3"]
@@ -49,11 +49,11 @@ export class FavoritesPage implements OnInit {
     });
   }
 
-  loadFilmData(favFilms: string[]) {
+  loadFilmData(favFilm: string[]) {
     const observables = [];
 
     // Create an API call for every saved movie ID
-    for (let id of favFilms) {
+    for (let id of favFilm) {
       observables.push(this.apiService.getFilm(id));
     }
 
@@ -64,26 +64,27 @@ export class FavoritesPage implements OnInit {
     })
   }
 
-  loadPeopleData(favPeople: string[]) {
+  loadPersonData(favPerson: string[]) {
     const observables = [];
 
     // Create an API call for every saved movie ID
-    for (let id of favPeople) {
+    for (let id of favPerson) {
       observables.push(this.apiService.getPerson(id));
     }
 
     // Wait until all observables are finished
     forkJoin(observables).subscribe(result => {
-      console.log('people data: ', result);
+      console.log('person data: ', result);
       this.people = result;
     })
   }
- 
-  loadPlanetData(favPlanets: string[]) {
+
+  
+  loadPlanetData(favPlanet: string[]) {
     const observables = [];
 
     // Create an API call for every saved planet ID
-    for (let id of favPlanets) {
+    for (let id of favPlanet) {
       observables.push(this.apiService.getPlanet(id));
     }
 
